@@ -8,7 +8,7 @@
 85,Bishops Corner Interchange
 90,Campbells Run
 95,I-79 On-Ramp
-099,Pittsburgh Int. West</a>210,
+99,Pittsburgh Int. West
 101,Pittsburgh Int. East
 100,I-279 Pittsburgh Interchange
 105,Rosslyn Farms Interchange
@@ -79,7 +79,7 @@
 410,Penn HIlls Interchange
 415,McCully Dr
 420,Thompson Run Rd
-425,Laurel Dr</a>
+425,Laurel Dr
 430,Old William Penn
 435,Haymaker Dr
 440,I-376/SR 22
@@ -128,4 +128,3 @@
 958,40th St. Bridge
 960,Millvale
 962,Etna
-

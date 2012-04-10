@@ -5,6 +5,7 @@ import com.ehalferty.pghtraffic.R;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
@@ -14,7 +15,6 @@ public class PittsburghTrafficCamerasActivity extends TabActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
         TabHost tabHost = getTabHost();
 
         TabSpec listSpec = tabHost.newTabSpec("List");

@@ -1,20 +1,20 @@
 package com.ehalferty.pghtraffic;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.ehalferty.pghtraffic.R;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Pair;
 
 public class CamerasFavoritesActivity extends Activity {
 	
 	private List<Pair<String, String>> name_and_id = new ArrayList<Pair<String, String>>();
+	ArrayList<String> itemList = new ArrayList<String>();
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,4 +36,28 @@ public class CamerasFavoritesActivity extends Activity {
 		}
 	}
 	
+	// Load favorites list from a file.
+	@SuppressWarnings("unchecked")
+	private ArrayList<String> LoadData(String filename) {
+		ArrayList<String> al = new ArrayList<String>();
+		InputStream is;
+		try {
+			is = openFileInput(filename);
+			ObjectInputStream ois = new ObjectInputStream(is);
+			al = (ArrayList<String>) ois.readObject();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (StreamCorruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return al;
+	}
 }
