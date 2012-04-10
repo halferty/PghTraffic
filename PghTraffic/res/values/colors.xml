@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="footerbackground">#333333</color>
+	<color name="grey3">#333333</color>
+	<color name="grey5">#555555</color>
+	<color name="grey7">#777777</color>
 
 </resources>

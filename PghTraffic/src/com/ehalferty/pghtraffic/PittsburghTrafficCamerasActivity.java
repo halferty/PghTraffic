@@ -5,13 +5,12 @@ import com.ehalferty.pghtraffic.R;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
 public class PittsburghTrafficCamerasActivity extends TabActivity {
-    /** Called when the activity is first created. */
-	@Override
+	
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
@@ -29,7 +28,7 @@ public class PittsburghTrafficCamerasActivity extends TabActivity {
 
         TabSpec favoritesSpec = tabHost.newTabSpec("Favorites");
         favoritesSpec.setIndicator("Favorites", getResources().getDrawable(android.R.drawable.ic_menu_info_details));
-        Intent favoritesIntent = new Intent(this, CamerasMapActivity.class);
+        Intent favoritesIntent = new Intent(this, CamerasFavoritesActivity.class);
         favoritesSpec.setContent(favoritesIntent);
 
         tabHost.addTab(listSpec);
